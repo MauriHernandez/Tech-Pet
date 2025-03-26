@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Inicio"
+        android:id="@+id/home_fragment"
+        android:icon="@drawable/home"
+        />
+    <item
+        android:title="Mascota"
+        android:id="@+id/pet_fragment"
+        android:icon="@drawable/pet"
+        />
+
+    <item
+        android:title="Reporte"
+        android:id="@+id/report_fragment"
+        android:icon="@drawable/report"
+        />
+
+
+
+</menu>

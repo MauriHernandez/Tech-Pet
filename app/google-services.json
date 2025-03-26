@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "202450820960",
+    "project_id": "techpet-27c29",
+    "storage_bucket": "techpet-27c29.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202450820960:android:d2044f747aec702f9b0805",
+        "android_client_info": {
+          "package_name": "com.example.techpet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202450820960-70vl39h3orak7hmqu1d9v3npgb4k6v3g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDayvAPNgZy1tdT4pduBr2jWkI9QPuHfds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "202450820960-70vl39h3orak7hmqu1d9v3npgb4k6v3g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
