@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_pet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="8dp" android:layout_marginEnd="8dp"   app:cardCornerRadius="12dp"  app:cardElevation="4dp"
+    app:cardBackgroundColor="?android:attr/colorBackground"> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:gravity="center_vertical"> <com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/pet_image"
+    android:layout_width="64dp"
+    android:layout_height="64dp"
+    android:scaleType="centerCrop"
+    app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.LargeComponent"
+    app:cornerSize="50%"
+    tools:src="@drawable/pets"
+    android:contentDescription="Imagen de la mascota"/>
+
+    <LinearLayout
+        android:layout_width="0dp" android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"> <TextView
+        android:id="@+id/pet_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="?android:attr/textColorPrimary" tools:text="Nombre de Mascota"/> <TextView
+        android:id="@+id/pet_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="?android:attr/textColorSecondary" tools:text="Tipo de Mascota"/> </LinearLayout>
+</LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horario Mañana"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_time_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="--:--"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                app:icon="@drawable/clock"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                android:onClick="showTimePickerDialog"
+                app:backgroundTint="@color/morning_yellow"
+                android:textColor="@color/text_on_light"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Ración (gramos)"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginStart="12dp"
+                app:startIconDrawable="@drawable/scale" app:startIconTint="?android:attr/textColorSecondary"> <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_portion_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horario Tarde"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_time_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="--:--"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                app:icon="@drawable/clock"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                android:onClick="showTimePickerDialog"
+                app:backgroundTint="@color/afternoon_orange"
+                android:textColor="@color/text_on_light"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Ración (gramos)"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginStart="12dp"
+                app:startIconDrawable="@drawable/scale" app:startIconTint="?android:attr/textColorSecondary"> <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_portion_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horario Noche"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="32dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_time_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="--:--"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                app:icon="@drawable/clock"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                android:onClick="showTimePickerDialog"
+                app:backgroundTint="@color/night_purple"
+                android:textColor="@color/text_on_dark"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Ración (gramos)"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginStart="12dp"
+                    app:startIconDrawable="@drawable/scale" app:startIconTint="?android:attr/textColorSecondary">
+                <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_portion_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar Horarios"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+            app:icon="@drawable/save"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            android:layout_marginTop="16dp"
+            app:backgroundTint="@color/blue_save"
+            android:textColor="@color/text_on_dark"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_petDetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?android:attr/colorBackground"> <TextView
+    android:id="@+id/tvPetName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" android:gravity="center"
+    android:layout_marginBottom="24dp" tools:text="Nombre de la Mascota"/> <com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="12dp" app:cardBackgroundColor="@color/card_background_light"> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Métricas Actuales"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" android:textColor="?android:attr/textColorPrimary" android:layout_marginBottom="12dp"/> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvCurrentWeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Peso: -- kg"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        android:drawableStart="@drawable/scale" android:drawablePadding="8dp" android:textColor="?android:attr/textColorSecondary" app:drawableTint="?android:attr/textColorSecondary" tools:text="Peso: 15.2 kg"/> <TextView
+    android:id="@+id/tvCurrentHeight"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:text="Altura: -- cm"
+    android:textSize="16sp"
+    android:gravity="center_vertical"
+    android:drawableStart="@drawable/ruler" android:drawablePadding="8dp" android:textColor="?android:attr/textColorSecondary" app:drawableTint="?android:attr/textColorSecondary" tools:text="Altura: 45 cm"/> </LinearLayout>
+</LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddMetric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Añadir Registro"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        app:icon="@drawable/add" app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        android:layout_marginBottom="24dp" app:backgroundTint="@color/blue_save" android:textColor="@color/text_on_dark"/> <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp" android:visibility="gone"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="12dp" app:cardBackgroundColor="@color/card_background_light"> <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:hint="Peso (kg)"
+            app:startIconDrawable="@drawable/scale" app:startIconTint="?android:attr/textColorSecondary"> <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:hint="Altura (cm)"
+            app:startIconDrawable="@drawable/ruler" app:startIconTint="?android:attr/textColorSecondary"> <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveMetric"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar Métricas"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+            app:icon="@drawable/save" app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:backgroundTint="@color/blue_save" android:textColor="@color/text_on_dark"/> </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="12dp" app:cardBackgroundColor="@color/card_background_light"> <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💡 Recomendaciones"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" android:textColor="?android:attr/textColorPrimary" android:layout_marginBottom="12dp"/> <TextView
+        android:id="@+id/tvRecommendations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Añade registros para obtener recomendaciones"
+        android:textSize="16sp"
+        android:textColor="?android:attr/textColorSecondary" tools:text="Basado en los datos, la mascota tiene un peso y altura saludables para su edad y raza. Continúe monitoreando."/> </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMetrics"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"/> </LinearLayout>

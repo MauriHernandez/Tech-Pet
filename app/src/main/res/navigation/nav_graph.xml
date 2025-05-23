@@ -3,10 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/home_fragment">
 
     <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/home_fragment"
         android:name="com.example.techpet.HomeFragment"
-        android:label="Home" />
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/report_fragment"
+        android:name="com.example.techpet.ReportFragment"
+        tools:layout="@layout/fragment_report"
+        android:label="fragment_report" />
+
+    <fragment
+            android:id="@+id/pet_fragment"
+            android:name="com.example.techpet.PetFragment"
+            android:label="fragment_pet"
+            tools:layout="@layout/fragment_pet" >
+
+        </fragment>
+
 </navigation>

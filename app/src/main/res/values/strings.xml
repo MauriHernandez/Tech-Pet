@@ -3,4 +3,43 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="default_web_client_id">202450820960-70vl39h3orak7hmqu1d9v3npgb4k6v3g.apps.googleusercontent.com</string>
+
+
+    <string name="register_pet">Registrar Mascota</string>
+    <string name="pet_image">Imagen de la mascota</string>
+    <string name="select_photo">Seleccionar foto</string>
+    <string name="pet_name">Nombre</string>
+    <string name="birth_date">Fecha de nacimiento</string>
+    <string name="pet_type">Tipo de mascota</string>
+    <string name="dog">Perro</string>
+    <string name="cat">Gato</string>
+    <string name="other">Otro</string>
+    <string name="breed">Raza</string>
+    <string name="gender">Género</string>
+    <string name="male">Macho</string>
+    <string name="female">Hembra</string>
+    <string name="color">Color</string>
+    <string name="feeding_configuration">Configuración de alimentación</string>
+    <string name="feeding_times">Horarios de comida</string>
+    <string name="morning">Mañana</string>
+    <string name="afternoon">Tarde</string>
+    <string name="evening">Noche</string>
+    <string name="night">Madrugada</string>
+    <string name="portion_amount_grams">Cantidad por ración (gramos)</string>
+    <string name="save">GUARDAR</string>
+    <string name="cancel">CANCELAR</string>
+    <string name="estado_conectado">Conectado ●</string>
+    <string name="estado_desconectado">Desconectado ○</string>
+    <string name="my_pets">Mis Mascotas</string>
+    <!-- Valores por defecto -->
+    <string name="temperatura_default">--°C</string>
+    <string name="humedad_default">--%</string>
+    <string name="nivel_agua_default">Nivel de agua: --%</string>
+    <string name="nivel_comida_default">Nivel de comida: --%</string>
+
+    <!-- Formatos -->
+    <string name="temperatura_formato">%.1f°C</string>
+    <string name="humedad_formato">%d%%</string>
+    <string name="nivel_agua_formato">Nivel de agua: %d%%</string>
+    <string name="nivel_comida_formato">Nivel de comida: %d%%</string>
 </resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="4dp" android:layout_marginEnd="4dp"   app:cardElevation="2dp" app:cardCornerRadius="12dp" app:cardBackgroundColor="@color/card_background_light"> <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:layout_marginBottom="8dp" tools:text="17 de Mayo, 2023"/> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"> <TextView
+    android:id="@+id/tvWeight"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:textSize="14sp"
+    android:textColor="?android:attr/textColorSecondary" android:drawableStart="@drawable/scale" android:drawablePadding="8dp" app:drawableTint="?android:attr/textColorSecondary" tools:text="Peso: 15.2 kg"/> <TextView
+    android:id="@+id/tvHeight"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:textSize="14sp"
+    android:textColor="?android:attr/textColorSecondary" android:drawableStart="@drawable/ruler" android:drawablePadding="8dp" app:drawableTint="?android:attr/textColorSecondary" tools:text="Altura: 45 cm"/> </LinearLayout>
+</LinearLayout>
+</com.google.android.material.card.MaterialCardView>

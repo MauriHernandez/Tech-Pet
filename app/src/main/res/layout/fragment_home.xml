@@ -24,40 +24,42 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="DISPOSITIVOS"
-                android:textAllCaps="true"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="start"
+                android:text="Dispositivos"
+                android:textAllCaps="false"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:gravity="start" />
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/sensor_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp"
+                android:visibility="gone"/>
 
             <ImageView
                 android:id="@+id/plusImage"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginStart="16dp"
-                android:src="@drawable/plus" />
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/configuration"
-                android:layout_marginStart="16dp" />
-
+                android:src="@drawable/add" />
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/notification"
                 android:layout_marginStart="16dp" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/setting"
+                android:layout_marginStart="16dp" />
+
+
         </LinearLayout>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/session_info_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:elevation="6dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="8dp">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -66,22 +68,16 @@
                 android:padding="16dp">
 
                 <TextView
-                    android:id="@+id/fecha"
+                    android:id="@+id/card_no_devices"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/montserrat_bold"
                     android:text="No tienes dispositivos añadidos"
+                    android:textAlignment="center"
                     android:textColor="#FF5722"
                     android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/duracion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#0D1B34"
-                    android:textSize="16sp" />
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+
 
         <TextView
             android:id="@+id/no_devices_text"

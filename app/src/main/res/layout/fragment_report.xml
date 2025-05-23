@@ -1,14 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReportFragment">
+    android:background="?android:attr/colorBackground">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:elevation="4dp"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/rounded_card_background">
+
+            <TextView
+                android:id="@+id/tvDeviceName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dispensador"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_marginBottom="8dp"
+                tools:text="Dispensador Principal"/>
+
+            <TextView
+                android:id="@+id/tvEstadoConexion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Estado: Conectado"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/checked"
+                android:drawablePadding="8dp"
+                app:drawableTint="@color/green"
+                tools:text="Estado: Conectado"/>
+
+            <TextView
+                android:id="@+id/tvUltimaActualizacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Última actualización: --"
+                android:textSize="12sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/clock"
+                android:drawablePadding="8dp"
+                app:drawableTint="?android:attr/textColorSecondary"
+                tools:text="Última actualización: Hace 5 minutos"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selector de período"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/periodGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp"
+            android:weightSum="3"
+            android:background="@drawable/rounded_border">
+
+            <RadioButton
+                android:id="@+id/btnDaily"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@drawable/radio_button_background"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Diario"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                android:textColor="@drawable/radio_button_text_color"
+                android:checked="true"
+                tools:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/btnWeekly"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@drawable/radio_button_background"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Semanal"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                android:textColor="@drawable/radio_button_text_color" />
+
+            <RadioButton
+                android:id="@+id/btnMonthly"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@drawable/radio_button_background"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Mensual"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                android:textColor="@drawable/radio_button_text_color" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Consumo de Comida"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginBottom="16dp"/> <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="24dp"
+        android:elevation="4dp"
+        android:padding="16dp"
+        android:background="@drawable/rounded_card_background"> <com.example.techpet.ConsumptionChart
+        android:id="@+id/barChart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        /> </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

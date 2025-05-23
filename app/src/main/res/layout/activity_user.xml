@@ -20,18 +20,20 @@
         app:navGraph="@navigation/nav_graph" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+
+        style="@style/BottomNavigationTheme"
         android:id="@+id/bottom_navigation_view"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:background="?android:attr/windowBackground"
-        app:itemIconSize="18dp"
-        app:itemRippleColor="@android:color/transparent"
+        android:background="@color/bottom_nav_background"
+        app:itemIconSize="24dp"
+        app:itemRippleColor="@color/gold_ripple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/nav_menu" />
-
+        app:menu="@menu/nav_menu"
+        app:itemIconTint="@color/bottom_nav_item_selector"
+        app:itemTextColor="@color/bottom_nav_item_selector"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

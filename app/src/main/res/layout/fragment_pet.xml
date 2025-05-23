@@ -1,14 +1,254 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PetFragment">
+    android:background="?android:attr/colorBackground"  tools:context=".AuthActivity">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_pets" android:fontFamily="@font/montserrat_bold"
+        android:textSize="24sp" android:textStyle="bold"
+        android:textColor="?android:attr/textColorPrimary" android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" android:layout_marginStart="16dp" android:layout_marginBottom="16dp"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddPet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/plus"
+        app:backgroundTint="@color/primary" />
+
+    <com.google.android.material.card.MaterialCardView
+    android:id="@+id/cardForm"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true" android:layout_margin="16dp" android:visibility="gone"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="16dp" app:cardBackgroundColor="?attr/colorSurface"> <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"> <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register_pet"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" android:textColor="?android:attr/textColorPrimary" android:layout_marginBottom="24dp"
+        android:gravity="center"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPetName" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/pet_name"
+            app:errorEnabled="true"
+            app:startIconDrawable="@drawable/pet" app:startIconTint="?android:attr/textColorSecondary"> <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPetName"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:maxLines="1"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilBirthDate" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/birth_date"
+            app:startIconDrawable="@drawable/calendar" app:startIconTint="?android:attr/textColorSecondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBirthDate"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvPetTypeLabel" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pet_type"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RadioGroup
+                android:id="@+id/rgPetType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:background="@drawable/rounded_border"> <RadioButton
+                android:id="@+id/rbDog"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_margin="1dp" android:background="@drawable/radio_button_background" android:button="@null" android:drawablePadding="4dp"
+                android:gravity="center"
+                android:text="@string/dog"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button" android:textColor="@drawable/radio_button_text_color" /> <RadioButton
+                android:id="@+id/rbCat"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@drawable/radio_button_background"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/cat"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                android:textColor="@drawable/radio_button_text_color" />
+
+                <RadioButton
+                    android:id="@+id/rbOther"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/radio_button_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/other"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:textColor="@drawable/radio_button_text_color" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilBreed" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/breed"
+            app:startIconDrawable="@drawable/pets" app:startIconTint="?android:attr/textColorSecondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBreed"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textCapWords"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvGenderLabel" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RadioGroup
+                android:id="@+id/rgGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:background="@drawable/rounded_border">
+
+                <RadioButton
+                    android:id="@+id/rbMale"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/radio_button_background"
+                    android:button="@null"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:text="@string/male"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:textColor="@drawable/radio_button_text_color" />
+
+                <RadioButton
+                    android:id="@+id/rbFemale"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/radio_button_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/female"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:textColor="@drawable/radio_button_text_color" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilColor" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp" android:hint="@string/color"
+            app:startIconDrawable="@drawable/pet" app:startIconTint="?android:attr/textColorSecondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etColor"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textCapWords"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="2">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                app:icon="@drawable/cancel" app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                android:textColor="?attr/colorPrimary" app:strokeColor="?attr/colorPrimary" app:strokeWidth="1dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                app:icon="@drawable/save" app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:backgroundTint="?attr/colorPrimary" android:textColor="?attr/colorOnPrimary"/> </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+</com.google.android.material.card.MaterialCardView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPets"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
+        android:layout_below="@id/titleTextView"
+        android:layout_above="@id/fabAddPet"
+        android:clipToPadding="false"
+        android:paddingBottom="72dp"/>
+</RelativeLayout>
